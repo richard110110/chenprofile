@@ -8,7 +8,6 @@ module.exports = function validateExperienceInput(data) {
   data.company = !isEmpty(data.company) ? data.company : '';
   data.from = !isEmpty(data.from) ? data.from : '';
 
-
   if (Validator.isEmpty(data.title)) {
     errors.title = 'Job title field is required';
   }
@@ -20,9 +19,6 @@ module.exports = function validateExperienceInput(data) {
   if (Validator.isEmpty(data.from)) {
     errors.from = 'From date field is required';
   }
- 
-
- 
 
   return {
     errors,
