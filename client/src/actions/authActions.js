@@ -1,6 +1,7 @@
 import axios from 'axios';
 import setAuthToken from '../utils/setAuthToken';
 import jwt_decode from 'jwt-decode';
+import toastr from 'toastr'
 
 import { GET_ERRORS, SET_CURRENT_USER } from './types';
 
@@ -15,6 +16,10 @@ export const registerUser = (userData, history) => dispatch => {
         payload: err.response.data
       })
     );
+  console.log(userData.name);  
+
+
+
 };
 
 // Login - Get User Token
@@ -39,6 +44,7 @@ export const loginUser = userData => dispatch => {
         payload: err.response.data
       })
     );
+
 };
 
 // Set logged in user
